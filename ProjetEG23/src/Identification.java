@@ -1,18 +1,17 @@
+import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.Window;
-
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 public class Identification {
 
@@ -85,6 +84,8 @@ public class Identification {
 		frame.getContentPane().add(lblMotDePasse);
 		
 		JButton btnNewButton = new JButton("Connexion");
+		btnNewButton.setBackground(Color.ORANGE);
+		btnNewButton.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -97,7 +98,19 @@ public class Identification {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(412, 386, 105, 23);
+		btnNewButton.setBounds(412, 399, 105, 34);
 		frame.getContentPane().add(btnNewButton);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(6, 6, 905, 74);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		panel.setBackground(new Color(14, 99, 162));
+		
+		JLabel lblNewLabel_1 = new JLabel("UTT LOGIN");
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setBounds(402, 22, 105, 34);
+		panel.add(lblNewLabel_1);
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 16));
 	}
 }
