@@ -36,6 +36,9 @@ public class Identification {
 		});
 	}
 	
+	/**
+	 * Open window
+	 */
 	public static void ouvrirIdentification() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
