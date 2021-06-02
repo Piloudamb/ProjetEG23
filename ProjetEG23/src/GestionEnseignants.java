@@ -15,8 +15,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
 
 public class GestionEnseignants {
 
@@ -29,6 +29,7 @@ public class GestionEnseignants {
 	private static JLabel lblNewLabel_4;
 	private static JLabel lblNewLabel_5;
 	private static JLabel lblNewLabel_6;
+	private static JPanel panel_1;
 
 	/**
 	 * Launch the application.
@@ -111,7 +112,7 @@ public class GestionEnseignants {
 		Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
 		
 		// Info d'enseignant(e)
-		JPanel panel_1 = new JPanel();
+		panel_1 = new JPanel();
 		panel_1.setBounds(178, 142, 519, 259);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
@@ -180,12 +181,22 @@ public class GestionEnseignants {
 		frame.getContentPane().add(btnNewButton_3);
 		
 		JButton btnNewButton_4 = new JButton("Ajouter");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Insertion.ouvrirInsertion();
+			}
+		});
 		btnNewButton_4.setBackground(Color.ORANGE);
 		btnNewButton_4.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_4.setBounds(733, 222, 117, 39);
 		frame.getContentPane().add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("Supprimer");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Suppression.ouvrirSuppression();
+			}
+		});
 		btnNewButton_5.setBackground(Color.ORANGE);
 		btnNewButton_5.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_5.setBounds(733, 288, 117, 39);
@@ -218,5 +229,9 @@ public class GestionEnseignants {
 	
 	public static JLabel getLabel_6() {
 		return lblNewLabel_6;
+	}
+	
+	public static JPanel getPanel_1() { 
+		return panel_1;
 	}
 }
