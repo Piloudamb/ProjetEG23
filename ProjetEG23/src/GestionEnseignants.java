@@ -23,6 +23,12 @@ public class GestionEnseignants {
 	private JFrame frame;
 	private Image find_logo;
 	private JTextField txtSaisir;
+	private static JLabel lblNewLabel_1;
+	private static JLabel lblNewLabel_2;
+	private static JLabel lblNewLabel_3;
+	private static JLabel lblNewLabel_4;
+	private static JLabel lblNewLabel_5;
+	private static JLabel lblNewLabel_6;
 
 	/**
 	 * Launch the application.
@@ -110,27 +116,27 @@ public class GestionEnseignants {
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nom:  Nigro");
+		lblNewLabel_1 = new JLabel("Nom:  Nigro");
 		lblNewLabel_1.setBounds(40, 20, 273, 28);
 		panel_1.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Prénom:  Jean");
+		lblNewLabel_2 = new JLabel("Prénom:  Jean-Marc");
 		lblNewLabel_2.setBounds(40, 60, 273, 28);
 		panel_1.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("Type:  Enseignant chercheur");
+		lblNewLabel_3 = new JLabel("Type:  Enseignant chercheur");
 		lblNewLabel_3.setBounds(40, 100, 273, 28);
 		panel_1.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("Responsable de:  EG23");
+		lblNewLabel_4 = new JLabel("Responsable de:  EG23");
 		lblNewLabel_4.setBounds(40, 140, 273, 28);
 		panel_1.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("Heures-supplémentaires:  3h");
+		lblNewLabel_5 = new JLabel("Heures-supplémentaires:  3h");
 		lblNewLabel_5.setBounds(40, 180, 273, 28);
 		panel_1.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("Entré(e) en:  2010");
+		lblNewLabel_6 = new JLabel("Entré(e) en:  2010");
 		lblNewLabel_6.setBounds(40, 217, 273, 28);
 		panel_1.add(lblNewLabel_6);
 		panel_1.setVisible(false);
@@ -163,6 +169,11 @@ public class GestionEnseignants {
 		
 		// Modification bouton
 		JButton btnNewButton_3 = new JButton("Modifier");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Modification.ouvrirModification();
+			}
+		});
 		btnNewButton_3.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_3.setBackground(Color.ORANGE);
 		btnNewButton_3.setBounds(733, 160, 117, 39);
@@ -179,5 +190,33 @@ public class GestionEnseignants {
 		btnNewButton_5.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_5.setBounds(733, 288, 117, 39);
 		frame.getContentPane().add(btnNewButton_5);
+	}
+	
+	public static void setLabel(JLabel label, String text) {
+		label.setText(text);
+	}
+	
+	public static JLabel getLabel_1() {
+		return lblNewLabel_1;
+	}
+	
+	public static JLabel getLabel_2() {
+		return lblNewLabel_2;
+	}
+	
+	public static JLabel getLabel_3() {
+		return lblNewLabel_3;
+	}
+	
+	public static JLabel getLabel_4() {
+		return lblNewLabel_4;
+	}
+	
+	public static JLabel getLabel_5() {
+		return lblNewLabel_5;
+	}
+	
+	public static JLabel getLabel_6() {
+		return lblNewLabel_6;
 	}
 }
