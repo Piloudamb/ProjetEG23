@@ -64,6 +64,7 @@ public class GestionEnseignants {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Accueil");
+		btnNewButton.setToolTipText("retour accueil");
 		btnNewButton.setBackground(Color.ORANGE);
 		btnNewButton.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -83,7 +84,7 @@ public class GestionEnseignants {
 				System.exit(0);
 			}
 		});
-		btnNewButton_1.setBounds(282, 461, 114, 39);
+		btnNewButton_1.setBounds(266, 461, 130, 39);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_1_1 = new JButton("D\u00E9connexion");
@@ -95,7 +96,7 @@ public class GestionEnseignants {
 				Identification.ouvrirIdentification();
 			}
 		});
-		btnNewButton_1_1.setBounds(528, 461, 114, 39);
+		btnNewButton_1_1.setBounds(509, 461, 130, 39);
 		frame.getContentPane().add(btnNewButton_1_1);
 		
 		JPanel panel = new JPanel();

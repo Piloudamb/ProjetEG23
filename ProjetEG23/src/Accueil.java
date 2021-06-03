@@ -12,6 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.awt.SystemColor;
+import javax.swing.SwingConstants;
 
 public class Accueil {
 
@@ -52,7 +54,9 @@ public class Accueil {
 		frame.getContentPane().setLayout(null);
 		
 		// Gestion des enseignants
-		JButton btnNewButton_4 = new JButton("Gestion des enseignants");
+		JButton btnNewButton_4 = new JButton("");
+		btnNewButton_4.setIcon(new ImageIcon(Accueil.class.getResource("/images/gestEnseignants.png")));
+		btnNewButton_4.setToolTipText("Fen\u00EAtre gestion enseignants");
 		btnNewButton_4.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		
 		btnNewButton_4.addActionListener(new ActionListener() {
@@ -73,7 +77,9 @@ public class Accueil {
 		
 		
 		// Gestion des UEs
-		JButton btnNewButton_4_1 = new JButton("Gestion des UE");
+		JButton btnNewButton_4_1 = new JButton("");
+		btnNewButton_4_1.setIcon(new ImageIcon(Accueil.class.getResource("/images/gestUE.png")));
+		btnNewButton_4_1.setToolTipText("Fen\u00EAtre gestion UE");
 		btnNewButton_4_1.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_4_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -86,7 +92,9 @@ public class Accueil {
 		
 		
 		// Gestion des etudiants
-		JButton btnNewButton_4_2 = new JButton("Gestion des étudiants");
+		JButton btnNewButton_4_2 = new JButton("");
+		btnNewButton_4_2.setIcon(new ImageIcon(Accueil.class.getResource("/images/gestEtudiants.png")));
+		btnNewButton_4_2.setToolTipText("Fen\u00EAtre gestion \u00E9tudiants");
 		btnNewButton_4_2.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_4_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -99,7 +107,9 @@ public class Accueil {
 		
 		
 		// Gestion des Entrees/Sorties
-		JButton btnNewButton_4_3 = new JButton("Entr\u00E9es / Sorties");
+		JButton btnNewButton_4_3 = new JButton("");
+		btnNewButton_4_3.setIcon(new ImageIcon(Accueil.class.getResource("/images/gestInOut.png")));
+		btnNewButton_4_3.setToolTipText("Fen\u00EAtre gestion entr\u00E9es / sorties");
 		btnNewButton_4_3.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_4_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -112,7 +122,9 @@ public class Accueil {
 		
 		
 		// Gestion du semestre
-		JButton btnNewButton_4_4 = new JButton("Gestion du semestre");
+		JButton btnNewButton_4_4 = new JButton("");
+		btnNewButton_4_4.setIcon(new ImageIcon(Accueil.class.getResource("/images/gestSemestre.png")));
+		btnNewButton_4_4.setToolTipText("Fen\u00EAtre gestion semestre");
 		btnNewButton_4_4.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton_4_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -126,13 +138,14 @@ public class Accueil {
 		
 		// Quitter/Deconnexion
 		JButton btnNewButton = new JButton("Quitter");
+		btnNewButton.setBackground(Color.ORANGE);
 		btnNewButton.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnNewButton.setBounds(302, 515, 126, 40);
+		btnNewButton.setBounds(294, 515, 139, 40);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("D\u00E9connexion");
@@ -144,7 +157,7 @@ public class Accueil {
 				Identification.ouvrirIdentification();
 			}
 		});
-		btnNewButton_1.setBounds(481, 515, 126, 40);
+		btnNewButton_1.setBounds(487, 515, 139, 40);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JPanel panel = new JPanel();
@@ -159,5 +172,4 @@ public class Accueil {
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
 	}
-
 }

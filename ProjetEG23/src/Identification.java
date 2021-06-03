@@ -98,7 +98,7 @@ public class Identification {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(412, 399, 105, 34);
+		btnNewButton.setBounds(399, 399, 121, 34);
 		frame.getContentPane().add(btnNewButton);
 		
 		JPanel panel = new JPanel();

@@ -54,6 +54,7 @@ public class GestionInOut {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Accueil");
+		btnNewButton.setToolTipText("retour accueil");
 		btnNewButton.setBackground(Color.ORANGE);
 		btnNewButton.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -73,7 +74,7 @@ public class GestionInOut {
 				System.exit(0);
 			}
 		});
-		btnNewButton_1.setBounds(315, 478, 114, 36);
+		btnNewButton_1.setBounds(299, 478, 133, 36);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_1_1 = new JButton("D\u00E9connexion");
@@ -85,7 +86,7 @@ public class GestionInOut {
 				Identification.ouvrirIdentification();
 			}
 		});
-		btnNewButton_1_1.setBounds(515, 478, 114, 36);
+		btnNewButton_1_1.setBounds(515, 478, 133, 36);
 		frame.getContentPane().add(btnNewButton_1_1);
 		
 		JPanel panel = new JPanel();

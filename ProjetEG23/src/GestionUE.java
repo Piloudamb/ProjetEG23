@@ -56,6 +56,7 @@ public class GestionUE {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Accueil");
+		btnNewButton.setToolTipText("retour accueil");
 		btnNewButton.setBackground(Color.ORANGE);
 		btnNewButton.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		btnNewButton.addActionListener(new ActionListener() {
@@ -75,7 +76,7 @@ public class GestionUE {
 				System.exit(0);
 			}
 		});
-		btnNewButton_1.setBounds(351, 475, 114, 35);
+		btnNewButton_1.setBounds(325, 475, 136, 35);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_1_1 = new JButton("D\u00E9connexion");
@@ -87,7 +88,7 @@ public class GestionUE {
 				Identification.ouvrirIdentification();
 			}
 		});
-		btnNewButton_1_1.setBounds(557, 475, 114, 35);
+		btnNewButton_1_1.setBounds(557, 475, 136, 35);
 		frame.getContentPane().add(btnNewButton_1_1);
 		
 		JPanel panel = new JPanel();
